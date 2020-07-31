@@ -58,7 +58,7 @@ For a given decision rule, the expected utility is defined as the expected rewar
 
 Let <img src="https://render.githubusercontent.com/render/math?math=EU[I[\sigma]]"> be the expected utility, Then
 
-<img src="Images/equations/IMG_0300.jpg", width = "50">
+<img src="Images/equations/IMG_0300.jpg" width = "50">
 
 We can calculate Expected utility using SimpleCalcExpectedUtility.m
 
@@ -67,6 +67,11 @@ In TestCases.m, there are simple test cases to play around
 To find the best decision rule, we need to find the decision rule with Maximum Expected Utility(MEU). 
 To achieve this, we compute expected utility factor <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}">
 
+Note 
 
+<img src="Images/equations/IMG_0301.jpg" width = "50">
+
+<img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)"> is a factor that is almost what we want to calculate, except we haven’t mul-
+tiplied in the deterministic factor  <img src="https://render.githubusercontent.com/render/math?math=\delta_D"> This factor doesn’t depend on our choice of decision rule. Furthermore, note that  <img src="https://render.githubusercontent.com/render/math?math=\delta_D"> is deterministic and simply picks out particular entries from  <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)">. Thus given <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)"> we can obtain an optimal decision rule
 
 
