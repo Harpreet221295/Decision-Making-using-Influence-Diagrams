@@ -25,7 +25,7 @@ To model this problem, we use influence diagrams.
 
 <figure>
   <figcaption>Influence Diagram of decision making process for surgical implanting ICD</figcaption>
-  <img src="Images/IMG_0291.jpg" width="200"/>   <img src="Images/IMG_0292.jpg" width="200"/>
+  <img src="Images/IMG_0291.jpg" width="200"/><img src="Images/IMG_0292.jpg" width="200"/>
   
 </figure>
 
