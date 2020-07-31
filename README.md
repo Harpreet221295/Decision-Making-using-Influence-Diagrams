@@ -46,6 +46,13 @@ Let's say our decision rule is to have surgery if T=t<sup>2</sup> and to not hav
 
 3. Utility Nodes - These variables represent a utility value/reward for joint assignment of their parents. They are represented by diamond shaped box. Utility node measures the reward received by taking specific action in decision node and observing the states of random variables given random variables and decision nodes are parents of utility node. Example - In the first diagram, U is the utility node that depends on both Outcome O and Decision D. There is small or negative utility/reward if we do not have ARVD and still implant ICD. But if we do have ARVD and implant ICD then it might be life saving and hence it shreceives very high utility/reward. In the second influence diagram, we used U<sub>2</sub> to model the utility for the outcome of surgery separately. Suppose the surgery results in a accident, then U<sub>2</sub> will assign large negative utility to such event.
 
+We represent utility using following table - 
+| Decision D| Outcome O| Utility/Reward |
+|:--------:|:-------:|:-----:|
+|d<sup>1</sup>|o<sup>1</sup>|300|
+|d<sup>2</sup>|o<sup>1</sup>|50|
+|d<sup>1</sup>|o<sup>2</sup>|-400|
+|d<sup>2</sup>|o<sup>2</sup>|-500|
 
 
 
