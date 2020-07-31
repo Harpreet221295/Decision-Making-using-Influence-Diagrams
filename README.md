@@ -79,7 +79,7 @@ tiplied in the deterministic factor  <img src="https://render.githubusercontent.
 CalculateExpectedUtilityFactor.m computes <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)">. It takes an influence diagram
 I that has a single decision node D and returns the expected utility factor of I with respect to D.
 
-OptimizeMEU.m computes the MEU and optimal decision rule  <img src="https://render.githubusercontent.com/render/math?math=\delta*_C">. It takes input an influence diagram I that has a single decision node D.
+OptimizeMEU.m computes the MEU and optimal decision rule  <img src="https://render.githubusercontent.com/render/math?math=\delta$^*_C$">. It takes input an influence diagram I that has a single decision node D.
 
 
 ### Dealing with multiple utility functions
