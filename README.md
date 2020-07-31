@@ -56,11 +56,16 @@ As an example we represent utility U in first diagram using following table -
 
 For a given decision rule, the expected utility is defined as the expected reward that can be obtained from the given influence diagram by multiplying all the factors(utility, CPDs for random variable and decision rule) and then summing out over all joint assignmnets the variableswhere expectation is taken over all random variables.
 
-Let EU[I[]] be the expected utility
+Let <img src="https://render.githubusercontent.com/render/math?math=EU[I[\sigma]]"> be the expected utility, Then
 
-<img src="https://render.githubusercontent.com/render/math?math=EU[I[\sigma]]">
+<img src="Images/equations/IMG_0300.jpg", width = "50">
 
-<img src="Images/equations/IMG_0300.jpg">
+We can calculate Expected utility using SimpleCalcExpectedUtility.m
+
+In TestCases.m, there are simple test cases to play around
+
+To find the best decision rule, we need to find the decision rule with Maximum Expected Utility(MEU). 
+To achieve this, we compute expected utility factor <img src="https://render.githubusercontent.com/render/math?math=\mu-D">
 
 
 
