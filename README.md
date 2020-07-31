@@ -56,11 +56,9 @@ As an example we represent utility U in first diagram using following table -
 
 For a given decision rule, the expected utility is defined as the expected reward that can be obtained from the given influence diagram by multiplying all the factors(utility, CPDs for random variable and decision rule) and then summing out over all joint assignmnets the variableswhere expectation is taken over all random variables.
 
-Let EU[I[\sigma]] be the expected utility
+Let EU[I[]] be the expected utility
 
-<img src="https://render.githubusercontent.com/render/math?math=\sigma">
-
-\[\sigma\]
+<img src="https://render.githubusercontent.com/render/math?math=EU[I[\sigma]]">
 
 <img src="Images/equations/IMG_0300.jpg">
 
