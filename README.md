@@ -1,4 +1,4 @@
-# Decision-Making-using-Influence-Diagrams
+# Modeling-Decision-Making-under-Uncertainity-for-surgical-implantation-of-ICD-in-ARVD-patients
 
 This project is part of [Probabilistic Graphical Models 1: Representation by Stanford University on Coursera](https://www.coursera.org/learn/probabilistic-graphical-models/home/welcome).
 
@@ -23,7 +23,7 @@ In this exercise, we aim to model this decision making under uncertainity proble
 To model this problem, we use influence diagrams. 
 
 <figure>
-  <center><figcaption>Influence Diagram of decision making process for surgical implanting ICD</figcaption><center>
+  <center><figcaption>Influence Diagrams of decision making process for surgical implanting ICD</figcaption><center>
   <p float="left">
     <img src="Images/IMG_0291.jpg" width="400" title="Diagram 1"/>
     <img src="Images/IMG_0292.jpg" width="400" title="Diagram 2"/>
@@ -31,7 +31,7 @@ To model this problem, we use influence diagrams.
 </figure>
 
 Influence Diagrams comprises of three types of nodes - 
-1. Random State Variables - These variables represent different conditions like presence or absence of a particular genetic risk factor etc. Conditional Probability Tables are used to specify their probability distribution. They are drawn using ovals. 
+1. Random State Variables - These variables represent different conditions like presence or absence of a particular genetic risk factor etc. Conditional Probability Tables are used to specify their probability distribution. They are drawn using ovals. In above diagrams, X represents ARVD and can have values x<sup>1</sup> & x<sup>2</sup>(for having ARVD or not). T is also a random variable which represents a test for ARVD. It can take values t<sup>1</sup> & t<sup>2</sup>. 
 2. Decision Nodes - These variables represent the action taken in specific situations(for certain joint assignment of parents of decision node). It is represented by square. Example - The decision to surgically implant ICD or not.
 3. Utility Nodes - These variables represent a utility value/reward for joint assignment of their parents. They are represented by diamond shaped box. Utility node measures the reward received by taking specific action in decision node and observing the states of random variables given random variables and decision nodes are parents of utility node. Example - 
 
