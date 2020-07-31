@@ -58,7 +58,7 @@ For a given decision rule, the expected utility is defined as the expected rewar
 
 Let EU[I[\sigma]] be the expected utility
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i\pi} = -1">
+<img src="https://render.githubusercontent.com/render/math?math=\[\sigma\]">
 
 \[\sigma\]
 
