@@ -24,8 +24,9 @@ In this exercise, we aim to model this decision making under uncertainity proble
 To model this problem, we use influence diagrams. 
 
 <figure>
+  <figcaption>Influence Diagram of decision making process for surgical implanting ICD</figcaption>
   <img src="Images/IMG_0291.jpg">
-  <figcaption>Influence Diagram of model for ICD surgical implanting decision process</figcaption>
+  
 </figure>
 
 Influence Diagrams comprises of three types of nodes - 
