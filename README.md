@@ -31,8 +31,11 @@ To model this problem, we use influence diagrams.
 </figure>
 
 Influence Diagrams comprises of three types of nodes - 
-1. Random State Variables - These variables represent different conditions like presence or absence of a particular genetic risk factor etc. Conditional Probability Tables are used to specify their probability distribution. They are drawn using ovals. In above diagrams, X represents ARVD and can have values x<sup>1</sup> & x<sup>2</sup>(for having ARVD or not). T is also a random variable which represents a test for ARVD. It can take values t<sup>1</sup> & t<sup>2</sup>. 
-2. Decision Nodes - These variables represent the action taken in specific situations(for certain joint assignment of parents of decision node). It is represented by square. Example - The decision to surgically implant ICD or not.
+
+1. Random State Variables - These variables represent different conditions like presence or absence of a particular genetic risk factor etc. Conditional Probability Tables are used to specify their probability distribution. They are drawn using ovals. In above diagrams, X represents ARVD and can have values x<sup>1</sup> & x<sup>2</sup>(for having ARVD or not). X3 is also a random variable which represents whether the parent has ARVD or not. T is also a random variable which represents a test for ARVD. It can take values t<sup>1</sup> & t<sup>2</sup>. In the first influence diagram, we have used random variable O to denote the final outcome of the patient. It depends on both X and D i.e whether the patient has ARVD and if he was being implanted ICD. It represents whether an undesirable outcome occured.
+
+2. Decision Nodes - These variables represent the action taken in specific situations(for certain joint assignment of parents of decision node). It is represented by square. Example - The decision to surgically implant ICD or not. In above diagrams, D is a decision node representing our decision to implant ICD or not. It can take values d<sup>1</sup> & d<sup>2</sup> for not having surgery or having surgery respectively. Decision Node D has parent T which shows that our decision depends on the result of the test for ARVD.
+
 3. Utility Nodes - These variables represent a utility value/reward for joint assignment of their parents. They are represented by diamond shaped box. Utility node measures the reward received by taking specific action in decision node and observing the states of random variables given random variables and decision nodes are parents of utility node. Example - 
 
 
