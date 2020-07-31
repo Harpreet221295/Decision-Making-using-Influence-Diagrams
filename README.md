@@ -17,14 +17,13 @@ effective in reducing arrhythmias.
 However, ARVD can be difficult to diagnose with certainty. While having known genetic risk
 factors confer susceptibility to developing ARVD, it is far from certain. Furthermore, diagnostic
 tests that directly measure some characteristic of heart function are not perfect, with some
-false positives and false negatives occurring. Different diagnostic tests also have different risks
-- getting some electrodes put on your chest during a stress test has different risks than surgery.
+false positives and false negatives occurring. Different diagnostic tests also have different risks - getting some electrodes put on your chest during a stress test has different risks than surgery.
 
 In this exercise, we aim to model this decision making under uncertainity problem of surgically implanting ICD. 
 To model this problem, we use influence diagrams. 
 
 <figure>
-  <figcaption><center>Influence Diagram of decision making process for surgical implanting ICD<center></figcaption>
+  <center><figcaption>Influence Diagram of decision making process for surgical implanting ICD</figcaption><center>
   <p float="left">
     <img src="Images/IMG_0291.jpg" width="400"/>
     <img src="Images/IMG_0292.jpg" width="400"/>
