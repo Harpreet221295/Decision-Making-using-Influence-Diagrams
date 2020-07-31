@@ -65,7 +65,7 @@ We can calculate Expected utility using SimpleCalcExpectedUtility.m
 In TestCases.m, there are simple test cases to play around
 
 To find the best decision rule, we need to find the decision rule with Maximum Expected Utility(MEU). 
-To achieve this, we compute expected utility factor <img src="https://render.githubusercontent.com/render/math?math=\mu_-D">
+To achieve this, we compute expected utility factor <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}">
 
 
 
