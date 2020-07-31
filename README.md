@@ -23,7 +23,7 @@ false positives and false negatives occurring. Different diagnostic tests also h
 In this exercise, we aim to model this decision making under uncertainity problem of surgically implanting ICD. 
 To model this problem, we use influence diagrams. 
 
-<img src="Images/IMG_0291.jpg">
+<img src="Images/IMG_0291.jpg" title="Influence Diagram of model for ICD surgical implanting decision process">
 
 Influence Diagrams comprises of three types of nodes - 
 1. Random State Variables - These variables represent different conditions like presence or absence of a particular genetic risk factor etc. Conditional Probability Tables are used to specify their probability distribution. They are drawn using ovals. 
