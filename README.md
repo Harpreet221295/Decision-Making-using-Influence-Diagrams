@@ -56,23 +56,29 @@ As an example we represent utility U in first diagram using following table wher
 
 For a given decision rule, the expected utility is defined as the expected reward that can be obtained from the given influence diagram by multiplying all the factors(utility, CPTs for random variables and decision rule) and then summing out over all joint assignments of the variables.
 
-Let <img src="https://render.githubusercontent.com/render/math?math=EU[I[\sigma]]"> be the expected utility, Then
+Let <img src="https://render.githubusercontent.com/render/math?math=EU[I[\sigma]]"> be the expected utility, where <img src="https://render.githubusercontent.com/render/math?math=I[\sigma]"> is a decision rule, X is a random variable Pa<sub>X</sub> denotes parents of X, P(X|Pa<sub>X</sub>) is the Conditional probability distribution of variable X in the given influence diagram, D is the decision varible defined above, U is the utility node and <img src="https://render.githubusercontent.com/render/math?math=\delta_D">  is the decision rule. 
+
+<img src="https://render.githubusercontent.com/render/math?math=EU[I[\sigma]]"> is computed as - 
 
 <img src="Images/equations/IMG_0300.jpg" width = "400">
 
-We can calculate Expected utility using SimpleCalcExpectedUtility.m
+We can calculate this Expected utility using SimpleCalcExpectedUtility.m
 
-In TestCases.m, there are simple test cases to play around
+In TestCases.m, there are simple test cases to play around -
+1. Test case 1: Line #4 -  simple influence diagram in which X1 is a random variable and D is a decision.  The utility U is a function of X1 and D.
+2. Test case 2: Line #53 - Similar to test case 1 with a new random variable node X3 introduced between U and the variable X1.  D acts on X3 instead of X1 now, but still contributes directly to the utility.
+3. Test case 3: Line #104 - Similar to test case 2 with D as a function of X1.
+4. Tet case 4: Line #161 - Adding another utility node to test case 3 which is a function of D
+
+All the test cases are created using MATLAb, and following the structure it is easy to create new variables, decision nodes and utility nodes for specific problems.
 
 To find the best decision rule, we need to find the decision rule with Maximum Expected Utility(MEU). 
-To achieve this, we compute expected utility factor <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}">
 
-Note 
+To achieve this, we compute expected utility factor <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}"> as a function of Decision node D and parents of D
 
 <img src="Images/equations/IMG_0301.jpg" width = "400">
 
-<img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)"> is a factor that is almost what we want to calculate, except we haven’t mul-
-tiplied in the deterministic factor  <img src="https://render.githubusercontent.com/render/math?math=\delta_D"> This factor doesn’t depend on our choice of decision rule. Furthermore, note that  <img src="https://render.githubusercontent.com/render/math?math=\delta_D"> is deterministic and simply picks out particular entries from  <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)">. Thus given <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)"> we can obtain an optimal decision rule,  <img src="https://render.githubusercontent.com/render/math?math=\delta*_C"> by simply scanning through <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)"> :
+<img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)"> is a factor that is almost what we want to calculate, except we haven’t multiplied in the deterministic factor  <img src="https://render.githubusercontent.com/render/math?math=\delta_D">. This factor doesn’t depend on our choice of decision rule. Furthermore, note that  <img src="https://render.githubusercontent.com/render/math?math=\delta_D"> is deterministic and simply picks out particular entries from  <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)">. Thus given <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)"> we can obtain an optimal decision rule, <img src="https://render.githubusercontent.com/render/math?math=$\delta^*_C$"> by simply scanning through <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)"> :
 
 <img src="Images/equations/IMG_0302.jpg" width = "400">
 
@@ -84,9 +90,14 @@ OptimizeMEU.m computes the MEU and optimal decision rule  <img src="https://rend
 
 ### Dealing with multiple utility functions
 For second influence diagram or particularly Testcase 4[Line #161] in TestCases.m
-* Using Joint Utility factors
-Add all the utility factors for different nodes into a single joint utility factor and then we can simply run OptimizeMEU.m on new influence diagram. OptimizeWithJointUtility
-* Using Linearity of Expectation
+* Using Joint Utility factors - 
+
+Add all the utility factors for different nodes into a single joint utility factor and then we can simply run OptimizeMEU.m on new influence diagram. 
+
+OptimizeWithJointUtility.m - It takes input an Influence diagram with a single decision node and possibly many utility nodes and returns maximum Expected Utility and corresponding optimal decision rule for D.
+
+* Using Linearity of Expectation- 
+
 We make use of the property linearity of expectations here. When we have multiple utility nodes, we have to account for them all in our expression for the expected utility given <img src="https://render.githubusercontent.com/render/math?math=\delta_D">. In other words, we can compute the expected utility factor with respect to D and each utility node separately and combine them later. We denote extected utility factor with respect to D and U<sub>i</sub> as  <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)">.
 
 <img src="Images/equations/IMG_0303.jpg" width = "400">
