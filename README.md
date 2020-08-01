@@ -85,3 +85,10 @@ OptimizeMEU.m computes the MEU and optimal decision rule  <img src="https://rend
 ### Dealing with multiple utility functions
 For second influence diagram or particularly Testcase 4[Line #161] in TestCases.m
 * Using Joint Utility factors
+Add all the utility factors for different nodes into a single joint utility factor and then we can simply run OptimizeMEU.m on new influence diagram. OptimizeWithJointUtility
+* Using Linearity of Expectation
+We make use of the property linearity of expectations here. When we have multiple utility nodes, we have to account for them all in our expression for the expected utility given <img src="https://render.githubusercontent.com/render/math?math=\delta_D">. In other words, we can compute the expected utility factor with respect to D and each utility node separately and combine them later. We denote extected utility factor with respect to D and U<sub>i</sub> as  <img src="https://render.githubusercontent.com/render/math?math=\mu_{-D}(D, Pa_D)">.
+
+<img src="Images/equations/IMG_0303.jpg" width = "400">
+
+OptimizeLinearExpectations.m takes an influence diagram I as input with a single decision node and multiple utility nodes and returns Maximum Expected Utility and corresponding optimal decision rule.
